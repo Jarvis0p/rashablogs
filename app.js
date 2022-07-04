@@ -77,7 +77,7 @@ app.get("/post/:postName", function (req, res) {
 
 
 // remove post page
-app.get("/removePostbYkrIsHna@/:postName", function (req, res) {
+app.get("/rashaRemove/:postName", function (req, res) {
   var storedTitle = lodash.lowerCase(req.params.postName);
   for (var i = 0; i <= posts.length; i++) {
     if (lodash.lowerCase(posts[i].postTitle) === storedTitle) {
