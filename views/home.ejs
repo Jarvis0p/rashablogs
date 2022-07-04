@@ -1,0 +1,15 @@
+<%- include ("partials/header") -%>
+
+<h1>Home</h1>
+<p>This is bloging website for hackers to post there bug bounty writeups, managed by rashahacks. Send your writeups to post here</p>
+
+<% homePosts.forEach(function(post){ %>
+    <h1><%= post.postTitle%></h1>
+    <p><%= post.postContent.substring(0,100) + "...."%>
+        <a href="/post/<%= post.postTitle%>">Read More</a>    
+    </p>
+<%});%> 
+
+
+
+<%- include("partials/footer") -%>
