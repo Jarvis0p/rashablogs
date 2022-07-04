@@ -79,7 +79,7 @@ app.get("/post/:postName", function (req, res) {
 // remove post page
 app.get("/removePost/:postName", function (req, res) {
   var storedTitle = lodash.lowerCase(req.params.postName);
-  for (var i = 0; i <= posts.length; i++) {
+  for (var i = 0; i < posts.length; i++) {
     if (lodash.lowerCase(posts[i].postTitle) === storedTitle) {
       posts.splice(i,1);
       res.redirect("/");
